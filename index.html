@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculator</title>
+
+		<!-- google font code -->
+		<!-- * Roboto Font is used from cdn -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- external style sheet -->
+		<link rel="stylesheet" href="style/style.css" />
+	</head>
+	<body>
+		<!-- using template element of the html -->
+		<template id="template-todo-list">
+			<div class="todo-list" id="todo-list">
+				<div class="wrapper">
+					<div class="checkbox">
+						<input type="checkbox" id="checkbox1" />
+						<label for="checkbox1"
+							><span class="icon fas fa-check"></span
+						></label>
+					</div>
+					<div class="text">
+						Buy new sweatshirtBuy new sweatshirtBuy new sweatshirtBuy new
+						sweatshirtBuy new sweatshirt
+					</div>
+					<div class="menu">
+						<input type="checkbox" id="menu" />
+						<label class="fas fa-ellipsis-v" for="menu"></label>
+
+						<div class="open-menu">
+							<ul>
+								<li class="edit"><span class="fa fa-pencil"></span>edit</li>
+								<li class="delete">
+									<span class="fa fa-trash"></span>
+									delete
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		<!-- using template element of the html -->
+
+		<!-- main content start here -->
+		<section class="todo" id="todo">
+			<div class="todo-wrapper">
+				<div class="todo-header">
+					<div class="current-date-day">
+						<div class="date">
+							<p>12</p>
+							<ul>
+								<li class="month"><b>jan</b></li>
+								<li class="year">2016</li>
+							</ul>
+						</div>
+						<div class="day">
+							<small>TUESDAY</small>
+						</div>
+					</div>
+				</div>
+				<div class="todo-lists"></div>
+				<div class="todo-add-button">
+					<button class="add-todo" id="add-todo">+</button>
+				</div>
+			</div>
+		</section>
+		<!-- main content end here -->
+
+		<div class="model model-add-update" id="model">
+			<div class="wrapper">
+				<form id="todo-content">
+					<textarea placeholder="Enter here"></textarea>
+					<button class="button">add</button>
+				</form>
+				<div class="close">
+					<span class="fa fa-times"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="model model-delete" id="model-delete">
+			<div class="wrapper">
+				<p>Are you sure want to permanently delete this task?</p>
+				<div class="wrapper-bottom">
+					<button class="button cancel">cancel</button>
+					<button class="button delete">delete</button>
+				</div>
+				<div class="close">
+					<span class="fa fa-times"></span>
+				</div>
+			</div>
+		</div>
+		<!-- 
+			* font-awesome cdn
+			* custom script file here
+		-->
+		<!-- script -->
+		<script
+			src="https://kit.fontawesome.com/6a7e215d49.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="script/script.js"></script>
+	</body>
+</html>
